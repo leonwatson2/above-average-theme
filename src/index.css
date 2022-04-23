@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Fredoka';
+  src: local('Fredoka'), url(./fonts/FredokaOne-Regular.ttf) format('ttf');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+:root {
+  --image-background-color: #010101;
+  --brand-01: #00c2cb;
+  --brand-02: #174a4d;
+  --brand-03: #cc5100;
+  --footer-background: #010101;
+  --footer-color: white;
+  --main-container-width: 1500px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Fredoka One', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h4 {
+  margin: 5px 0;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+
+:where(h1, h2, h3, h4)::first-letter {
+  color: var(--brand-01);
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+button {
+  border: none;
+  background: none;
+}

@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: var(--footer-background);
+  height: 300px;
+  margin-top: 150px;
+  color: var(--footer-color);
+  padding: 50px;
+}
+
+.content {
+  width: var(--main-container-width);
+}

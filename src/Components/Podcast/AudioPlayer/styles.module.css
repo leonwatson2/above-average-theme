@@ -1,0 +1,153 @@
+.container {
+  position: fixed;
+  bottom: 200px;
+  right: 100px;
+  background: white;
+  z-index: 40;
+  width: 300px;
+  box-shadow: 3px 3px 10px black;
+}
+.playBtn {
+  width: 40px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+.playBtn:hover .playBtn__svg {
+  opacity: 1;
+}
+.playPause svg {
+  width: 30px;
+  height: 30px;
+}
+.playPause :where(.playBtn__svg, .pause_svg) svg {
+  width: 50px;
+  height: 50px;
+}
+.playBtn__svg svg,
+.pause_svg svg {
+  color: var(--brand-01);
+  transition: 1s;
+}
+.info {
+  text-align: center;
+  grid-area: info;
+}
+
+.playPause {
+  color: var(--brand-01);
+
+  grid-area: playPause;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.controls {
+  grid-area: controls;
+}
+.bar {
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  column-gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.barTime {
+  text-align: center;
+}
+.volumeContainer {
+  grid-area: volume;
+  position: relative;
+  align-self: center;
+  justify-self: center;
+}
+.volumeContainer input[type='checkbox'] {
+  display: none;
+}
+.volumeBar {
+  position: absolute;
+  background: #fff;
+  bottom: 0;
+  border-radius: 10px 10px 10px 10px;
+  width: 150px;
+  height: 6px;
+}
+.icon {
+  position: absolute;
+  left: -30px;
+  bottom: 0;
+  transform: translateY(50%);
+}
+.volumeBall {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  transform: translateX(-5px);
+  background: var(--brand-01);
+  bottom: -50%;
+  left: 0;
+  border-radius: 10px;
+}
+.barTime,
+.volumeBar {
+  user-select: none;
+}
+.barProgress {
+  border: dotted var(--brand-01) 2px;
+  width: 100%;
+  height: 10px;
+}
+
+.player {
+  display: grid;
+  grid-template-areas: 'info info info' '. playPause volume' 'controls controls controls';
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 25px;
+  position: fixed;
+  z-index: 699;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 90px;
+  width: 100%;
+  background: -webkit-linear-gradient(
+    242deg,
+    rgba(2, 0, 36, 1) 65%,
+    var(--brand-02) 100%
+  );
+  background: linear-gradient(
+    242deg,
+    rgba(2, 0, 36, 1) 65%,
+    var(--brand-02) 100%
+  );
+  color: white;
+}
+@media only screen and (max-width: 600px) {
+  .volumeContainer {
+    justify-self: start;
+    height: 15px;
+    margin: 15px 0;
+  }
+  .player {
+    position: fixed;
+    grid-template-areas: 'info info info' '. playPause .' '. volume .' 'controls controls controls';
+
+    z-index: 699;
+    bottom: 0;
+    min-height: 200px;
+    width: 100%;
+  }
+  .playPause :where(.playBtn__svg, .pause_svg) svg {
+    width: 75px;
+    height: 75px;
+  }
+  .barProgress {
+    height: 25px;
+  }
+  .volumeBar {
+    left: 10px;
+  }
+  .icon {
+    left: -20px;
+  }
+}

@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+}
+.buttonContainedTwitter {
+  --social-color: #1da1f2;
+}
+
+.buttonContainedInstagram {
+  --social-color: #e4405f;
+}
+
+.buttonContainedYoutube {
+  --social-color: #cd201f;
+}
+.socialButton {
+  transition: 0.3s cubic-bezier(0.895, 1, 0.685, 0.22);
+}
+.socialButton:where(:hover, :focus) {
+  opacity: 0.6;
+}
+.toast {
+  --toastify-text-color-info: var(--brand-01);
+}

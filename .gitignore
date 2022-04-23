@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+build
+prodBuild
+
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+.env.staging
