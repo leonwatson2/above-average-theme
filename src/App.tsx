@@ -27,6 +27,7 @@ const App: FC = () => {
             path={process.env.MAIN_ROUTE || '/'}
             element={<Home episodes={episodes} />}
           >
+            <Route path='podcast/:episodeLink' element={null} />
             <Route path='./socials'>
               <Route path={':socialAccount'} element={<SocialRedirects />} />
             </Route>

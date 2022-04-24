@@ -43,7 +43,12 @@ export const SocialButtons: FC = () => {
             margin={'4px'}
             className={styles.socialButton}
           >
-            <SocialIcon tabIndex={-1} url={prop.href} network={prop.network} />
+            <SocialIcon
+              tabIndex={-1}
+              url={prop.href}
+              network={prop.network}
+              target={'_blank'}
+            />
           </Box>
         );
       })}

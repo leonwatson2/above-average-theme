@@ -9,7 +9,6 @@ type WpSocialLink = {
     link: string;
   };
 };
-console.log(process.env.MAIN_ROUTE);
 export const getSheetData: () => Promise<{
   episodes: EpisodeType[];
   socials: SocialLinkType[];
@@ -27,6 +26,7 @@ export const getSheetData: () => Promise<{
     image: null,
     description: ep.excerpt.rendered,
     number: ep.menu_order,
+    link: ep.slug,
   }));
   const socials: SocialLinkType[] = wpSocials.map((wpSocial) => {
     return {

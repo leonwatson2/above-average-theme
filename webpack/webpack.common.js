@@ -11,7 +11,11 @@ module.exports = ({ env }) => {
     entry: path.resolve(__dirname, '..', './src/index.tsx'),
     output: {
       path: path.resolve(__dirname, '..', 'build'),
-      publicPath: path.join('wp-content/themes/above-average-theme', 'build'),
+      publicPath: path.join(
+        isProduction ? '.' : '/aboveaveragewp',
+        'wp-content/themes/above-average-theme',
+        'build'
+      ),
       filename: 'index.js',
       assetModuleFilename: path.join('/images', '[name][ext]'),
     },

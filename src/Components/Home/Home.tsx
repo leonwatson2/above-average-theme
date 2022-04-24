@@ -12,6 +12,7 @@ import Logo from '../../Assets/Logo.png';
 
 import 'react-toastify/dist/ReactToastify.css';
 import { EpisodeType } from '../../Shared/Types';
+import { Link } from 'react-router-dom';
 
 export const Home: FC<{ episodes: Array<EpisodeType> }> = ({ episodes }) => {
   const [theme] = useState(true);
@@ -24,7 +25,9 @@ export const Home: FC<{ episodes: Array<EpisodeType> }> = ({ episodes }) => {
           color='inherit'
           aria-label='menu'
         >
-          <img src={Logo} alt='Group Photo'></img>
+          <Link to={`${process.env.MAIN_ROUTE}`}>
+            <img src={Logo} alt='Group Photo'></img>
+          </Link>
         </IconButton>
         <Box sx={{ flexGrow: 1 }} />
 
