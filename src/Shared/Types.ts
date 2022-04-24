@@ -4,7 +4,7 @@ export type EpisodeType = {
   image: string | null;
   description: string;
   number: number;
-  link?: string;
+  link: string;
 } | null;
 
 export type SocialLinkType = {
